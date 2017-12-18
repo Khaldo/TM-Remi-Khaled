@@ -11,7 +11,7 @@ Feature: Some connexion test on amazon
 	
 	Scenario: Log in through Amazon Homepage with wrong credentials
     Given I am on Amazon HP
-    When I click on log in
+    When I click on chez vous
     When I use login 'crapius.bedddn.mustapha@gmail.com' and password 'mangaazdka93' to connect 
 	Then I should see 'Impossible de trouver un compte correspondant à cette adresse e-mail'
 	

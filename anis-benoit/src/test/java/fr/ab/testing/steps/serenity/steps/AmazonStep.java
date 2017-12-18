@@ -12,6 +12,14 @@ public class AmazonStep {
 		amazonPage.open();
 	}
 
+	public void show_adress() {		
+		amazonPage.openAdressMenu();
+	}
+
+	public void change_postal_code(String postalCode) {		
+		amazonPage.enterPostalCode(postalCode);
+	}
+	
 	public void searches_for_items(String keyword) {
 		amazonPage.launchSearch(keyword);
 	}

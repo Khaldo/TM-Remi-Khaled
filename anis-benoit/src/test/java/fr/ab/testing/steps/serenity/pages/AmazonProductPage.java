@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.findby.By;
 
 @DefaultUrl("http://www.amazon.fr")
 public class AmazonProductPage extends AmazonPage {
-	@FindBy(css = "#submit\\2e add-to-cart")
+	@FindBy(id = "add-to-cart-button")
 	private WebElement addToCartButton;
 	@WhenPageOpens
 	public void waitUntilAmazonLogoAppears() {

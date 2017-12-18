@@ -19,6 +19,9 @@ public class AmazonPage extends PageObject {
 	@FindBy(id = "#nav-cart > span.nav-cart-icon.nav-sprite")
 	private WebElement cartButton;
 	
+	@FindBy(css = "#GLUXZipUpdateInput")
+	private WebElement postalField;
+	
 	@FindBy(id = "twotabsearchtextbox")
 	private WebElement searchInputField;
 	
@@ -30,6 +33,9 @@ public class AmazonPage extends PageObject {
 	
 	@FindBy(css = "#searchDropdownBox > option:nth-child(13)")
 	private WebElement categories;
+	
+	@FindBy(id = "glow-ingress-line1")
+	private WebElement adressButton;
 	
 	@FindBy(css = "#nav-item-signout")
 	private WebElement disconnectButton;
@@ -49,6 +55,15 @@ public class AmazonPage extends PageObject {
 	}
 	public void openChezVousPage() {
 		chezVousButton.click();
+	}
+	
+	public void openAdressMenu() {
+		adressButton.click();
+	}
+	
+	public void enterPostalCode(String postalCode) {
+		postalField.sendKeys(postalCode);
+		postalField.submit();
 	}
 	
 	public void openFirstResultPage() {

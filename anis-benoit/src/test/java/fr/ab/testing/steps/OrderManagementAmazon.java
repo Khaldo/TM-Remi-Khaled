@@ -7,6 +7,7 @@ import fr.ab.testing.steps.serenity.steps.ConnectStep;
 import fr.ab.testing.steps.serenity.steps.AddToCartStep;
 import fr.ab.testing.steps.serenity.steps.AmazonStep;
 import fr.ab.testing.steps.serenity.steps.RemoveFromCartStep;
+import javafx.geometry.Pos;
 import net.thucydides.core.annotations.Steps;
 
 public class OrderManagementAmazon {	
@@ -21,6 +22,16 @@ public class OrderManagementAmazon {
 	    	addToCartStep.add_to_cart();
 	    }
 
+	    @When("I use the adress option")
+	    public void i_click_on_adress_button(){
+	    	amazonStep.show_adress();
+	    }
+	    
+	    @When("I enter the postal code '(.*)'")
+	    public void i_enter_postal_code(String postalCode){
+	    	amazonStep.change_postal_code(postalCode);
+	    }
+	    
 	    @When("I check my cart")
 	    public void openConnexion() {
 	    	amazonStep.open_cart();
